@@ -6,10 +6,6 @@ def show_menu() -> int:
     print("3. Сделать выборку сотрудников по зарплате")
     print("4. Добавить сотрудника")
     print("5. Удалить сотрудника")
-    print("6. Обновить данные сотрудника")
-    print("7. Экспортировать данные в формате json")
-    print("8. Экспортировать данные в формате cmv")
-    print("9. Закончить работу")
     return int(input("Введите номер необходимого действия: "))
 
 def last_name():
@@ -33,15 +29,6 @@ def DelPerson():
         print(data.read())
         who = int(input('Введите номер сотрудника для удаления: '))
         return who
-import json
-import csv
-def convertjson(phone_data, phone_datajoin):
-    with open('test.csv') as f:
-        phone_data = csv.DictReader(f)
-        phone_datajoin = list(phone_data)
-    with open('test.json', 'w') as f:
-        json.dump(phone_datajoin, f)
-    return phone_datajoin 
 
 
 
